@@ -1,24 +1,571 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首爾家族旅遊 🌸 終極完美大總結 V9 (AI 升級版)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+/* 1. THE SETUP & CUTE THEME */
+* { box-sizing: border-box; }
+p { margin: 0; margin-bottom: 12px; }
+body {
+  background-color: #fdf2f8; 
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  margin: 0;
+  min-height: 100vh;
+  padding: 20px 0;
+  place-items: center;
+}
+.slide-container {
+  align-items: center;
+  background-color: #fffaf0; 
+  background-image: radial-gradient(#fbcfe8 1.5px, transparent 1.5px);
+  background-size: 25px 25px;
+  border-radius: 24px;
+  border: 4px dashed #fbcfe8;
+  box-shadow: 0 15px 25px rgba(236, 72, 153, 0.15);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Nunito', sans-serif;
+  height: 720px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 40px 60px;
+  position: relative;
+  width: 1280px;
+}
+/* Washi Tape Decoration */
+.slide-container::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  width: 150px;
+  height: 35px;
+  background-color: #bbf7d0; 
+  opacity: 0.8;
+  z-index: 10;
+  border-radius: 4px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+.slide-container>* { position: relative; z-index: 1; }
+/* 2. TYPOGRAPHY */
+.slide-container h1, .slide-container h2, .slide-container h3 {
+  color: #be185d;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 800;
+  margin: 0;
+}
+.slide-container p, .slide-container li, .slide-container .subtitle, .slide-container .number-label {
+  color: #4b5563;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+}
+.slide-container h1 { font-size: 60px; text-align: center; line-height: 1.2;}
+.slide-container .slide-title { font-size: 38px; font-weight: 800; margin-bottom: 25px; text-align: left; width: 100%; border-bottom: 3px dashed #fbcfe8; padding-bottom: 10px;}
+.slide-container h3 { font-size: 24px; font-weight: 800; margin-bottom: 12px; color: #db2777;}
+.slide-container p, .slide-container li { font-size: 18px; line-height: 1.5; }
+.slide-container .subtitle { font-weight: 700; margin: 15px auto; color: #9d174d; text-align: center;}
+/* 3. LAYOUTS */
+.title-layout { text-align: center; background: white; padding: 40px; border-radius: 30px; border: 3px solid #fbcfe8; box-shadow: 0 10px 15px rgba(0,0,0,0.05);}
+.two-column { align-items: flex-start; display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; width: 100%; }
+.two-column.tiled { align-items: stretch; grid-template-columns: 1fr 1fr; }
+.two-column.tiled>div { background-color: white; border-radius: 20px; border: 3px dashed #fbcfe8; padding: 30px; text-align: left;}
+.two-column ul { list-style: none; margin: 0; padding-left: 0; }
+.two-column li { margin-bottom: 12px; position: relative; padding-left: 35px; }
+.two-column li::before { content: '🌸'; position: absolute; left: 0; font-size: 16px; top: 2px;}
+.image-wrapper { border-radius: 20px; height: 350px; max-width: 100%; overflow: hidden; width: 100%; border: 4px solid white; box-shadow: 0 10px 15px rgba(0,0,0,0.1);}
+.image-wrapper img { height: 100%; max-width: 100%; object-fit: cover; width: 100%; }
+.tiled-content { align-items: stretch; display: flex; gap: 25px; justify-content: center; width: 100%; }
+.tile { background-color: white; border-radius: 20px; border: 3px dashed #fbcfe8; flex: 1; padding: 25px; text-align: left; box-shadow: 0 4px 6px rgba(0,0,0,0.05);}
+.tile .icon { color: #f472b6; font-size: 36px; margin-bottom: 10px; background: #fdf2f8; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center;}
+.bullet-list { max-width: 1100px; width: 100%; background: white; padding: 35px; border-radius: 20px; border: 3px dashed #bbf7d0;}
+.bullet-list ul { list-style: none; margin: 0; padding: 0; }
+.bullet-list li { margin-bottom: 20px; padding-left: 50px; position: relative; font-size: 20px;}
+.bullet-list i { color: #34d399; font-size: 26px; left: 0; position: absolute; top: 2px; }
+.bullet-list li strong { color: #db2777; font-weight: 800; display: block; margin-bottom: 4px;}
+.highlight-numbers-layout > div:first-child { flex: 0 0 35%; text-align: center; background: white; border-radius: 20px; padding: 30px; border: 3px dashed #fecaca; display: flex; flex-direction: column; justify-content: center;}
+.highlight-numbers-layout .number { color: #ef4444; font-size: 110px; font-weight: 800; line-height: 1; }
+/* Timeline Layout Re-designed to fix overlap */
+.timeline-layout { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; width: 100%; background: white; padding: 40px; border-radius: 20px; border: 3px dashed #bae6fd; position: relative; align-items: stretch;}
+.timeline-item { background: #f0f9ff; border-radius: 16px; padding: 25px 20px; text-align: center; border: 2px solid #bae6fd; position: relative; box-shadow: 0 4px 6px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: center;}
+.timeline-item:not(:last-child)::after { content: '\f0da'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: -18px; top: 50%; transform: translateY(-50%); color: #7dd3fc; font-size: 28px; z-index: 2; }
+.timeline-item h3 { color: #0284c7; font-size: 22px; font-weight: 800; margin-bottom: 12px; }
+.timeline-item p { font-size: 17px; line-height: 1.5; color: #4b5563; margin: 0; }
+.qa-layout { text-align: center; background: white; padding: 60px; border-radius: 40px; border: 4px dashed #fbcfe8;}
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>首爾家族追星雙軌之旅 V3</title>    
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  </head>
+/* Grid for Souvenirs */
+.souvenir-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 15px; width: 100%; }
+.souvenir-grid > div { background-color: white; border-radius: 20px; border: 3px dashed #fbcfe8; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.souvenir-grid h3 { font-size: 20px; display: flex; align-items: center; gap: 8px; margin-bottom: 8px; color: #db2777;}
+.souvenir-grid p { font-size: 16px; line-height: 1.4; margin: 0; color: #4b5563;}
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-    <script
-      defer
-      src="%VITE_ANALYTICS_ENDPOINT%/umami"
-      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
-  </body>
+/* AI Interactive Elements CSS */
+.ai-btn {
+    background: linear-gradient(135deg, #fbcfe8, #f472b6);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(236, 72, 153, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-family: 'Quicksand', 'Nunito', sans-serif;
+    margin-top: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.ai-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(236, 72, 153, 0.4);
+}
+.ai-btn:active { transform: translateY(1px); }
 
+/* AI Modal CSS */
+.ai-modal-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: none; justify-content: center; align-items: center; z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+.ai-modal {
+    background: #fffaf0;
+    width: 90%; max-width: 550px;
+    border-radius: 24px;
+    border: 4px dashed #fbcfe8;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    font-family: 'Nunito', sans-serif;
+}
+.ai-modal h3 { color: #db2777; margin-top: 0; font-size: 26px; display: flex; align-items: center; gap: 10px; font-weight: 800; font-family: 'Quicksand', sans-serif; border-bottom: 2px dashed #fbcfe8; padding-bottom: 15px;}
+.ai-close { position: absolute; top: 20px; right: 25px; font-size: 28px; cursor: pointer; color: #f472b6; border: none; background: transparent; transition: 0.2s;}
+.ai-close:hover { color: #be185d; transform: scale(1.1); }
+.ai-input-area { display: flex; gap: 10px; margin-top: 25px; }
+.ai-input { flex: 1; padding: 15px; border: 3px solid #fce7f3; border-radius: 16px; font-size: 16px; outline: none; transition: 0.2s; color: #4b5563; font-weight: 600;}
+.ai-input:focus { border-color: #f472b6; }
+.ai-submit { background: #f472b6; color: white; border: none; border-radius: 16px; padding: 0 25px; font-weight: bold; font-size: 16px; cursor: pointer; transition: 0.2s; box-shadow: 0 4px 6px rgba(236, 72, 153, 0.2);}
+.ai-submit:hover { background: #db2777; box-shadow: 0 6px 10px rgba(219, 39, 119, 0.3);}
+.ai-result { margin-top: 25px; padding: 20px; background: white; border-radius: 16px; border: 3px solid #fce7f3; min-height: 100px; color: #4b5563; font-size: 18px; line-height: 1.6; white-space: pre-wrap; display: none; max-height: 300px; overflow-y: auto;}
+.ai-result strong { color: #db2777; }
+.ai-loading { color: #f472b6; font-weight: bold; text-align: center; display: none; margin-top: 25px; font-size: 18px;}
+.ai-loading i { animation: spin 1s linear infinite; margin-right: 8px; }
+@keyframes spin { 100% { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+
+<!-- Slide 1: Title -->
+<div class="slide-container">
+    <div class="title-layout">
+        <h1>首爾家族旅遊日記 🎀<br><span style="font-size: 40px; color:#f472b6;">終極完美全攻略 (V9 AI智能版)</span></h1>
+        <p class="subtitle">📆 2024.07.17 - 07.21 | 📍 弘大 Airbnb<br>6大6小 雙軌追星大冒險 | 絕不遺漏任何細節！</p>
+    </div>
+</div>
+
+<!-- Slide 2: Flight Info -->
+<div class="slide-container">
+    <h2 class="slide-title">✈️ 航班資訊總覽 (務必截圖)</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div>
+                <ul>
+                    <li style="margin-bottom: 30px;"><strong style="font-size: 26px;">🛫 去程 (7/17 三)</strong><br>
+                        <span style="color:#db2777; font-weight:800; font-size:22px;">台灣虎航 IT662</span><br>
+                        <span style="font-size: 20px;">16:00 高雄小港 出發</span><br>
+                        <span style="font-size: 20px;">19:45 抵達 首爾金浦 (GMP)</span>
+                    </li>
+                    <li><strong style="font-size: 26px;">🛬 回程 (7/21 日)</strong><br>
+                        <span style="color:#db2777; font-weight:800; font-size:22px;">德威航空 TW671</span><br>
+                        <span style="font-size: 20px;">13:05 首爾仁川 (ICN) T1 出發</span><br>
+                        <span style="font-size: 20px;">15:10 抵達 高雄小港</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="image-wrapper" style="display: flex; align-items: center; justify-content: center; background: #fdf2f8; color: #db2777; font-size: 24px; font-weight: bold;"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 3: Luggage & Powerbank -->
+<div class="slide-container">
+    <h2 class="slide-title">🧳 飛安與行李限重生死鬥</h2>
+    <div class="content-area">
+        <div class="two-column highlight-numbers-layout" style="margin-bottom: 20px;">
+            <div>
+                <div class="number">15<span style="font-size: 50px;">kg</span></div>
+                <div class="number-label">德威回程 托運限重</div>
+            </div>
+            <div>
+                <h3>⚠️ 托運 15kg，手提 10kg！</h3>
+                <p>1. 每人托運僅 1件 15kg。保養品液體 >100ml 必托運！</p>
+                <p>2. 善用 <span style="color:#059669;">手提登機 10kg</span>！重物 (美妝、服飾、HBAF杏仁果) 盡量移至手提包。</p>
+                <p style="color: #ef4444; font-weight: 800;">3. 行動電源、手持風扇內含鋰電池，嚴禁托運！</p>
+                <p style="color: #b91c1c; font-size: 16px; background: #fee2e2; padding: 8px; border-radius: 8px;">🚨 韓國海關極嚴：機身必須有「清晰容量標示 mAh/Wh」，字跡模糊或無標示者會被直接沒收！</p>
+            </div>
+        </div>
+        <!-- Gemini AI Button Integration -->
+        <button class="ai-btn" onclick="openAIModal('luggage')"><i class="fa-solid fa-wand-magic-sparkles"></i> ✨ 不確定怎麼帶？呼叫 AI 行李安檢員</button>
+    </div>
+</div>
+
+<!-- Slide 4: Entry Card Warning -->
+<div class="slide-container">
+    <h2 class="slide-title">✍️ 機上任務：入境卡與生存準備</h2>
+    <div class="content-area">
+        <div class="bullet-list">
+            <ul>
+                <li><i class="fa-solid fa-pen-nib"></i> <strong>隨身攜帶 3~4 支原子筆：</strong><br>機上需填寫「紙本入境卡(黃色)」與「海關申報單(藍色)」。12個人如果只有1支筆會寫到崩潰！</li>
+                <li><i class="fa-solid fa-address-book"></i> <strong>團長手機存好地址與房東電話：</strong><br>填寫入境卡必備：Airbnb 的完整韓文/英文地址、房東手機。請在起飛前截圖存在相簿！</li>
+                <li><i class="fa-solid fa-plug"></i> <strong>電壓與插座 (燒毀警告)：</strong><br>韓國是 220V 雙圓孔插座 (4.8mm)。<span style="color:#ef4444;">台灣 110V 的吹風機、直髮夾插上去必燒毀！</span>僅支援國際電壓 (100V-240V) 之充電頭方可使用。</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 5: Transport Card Split -->
+<div class="slide-container">
+    <h2 class="slide-title">💳 交通卡分流攻略 (6大 6小)</h2>
+    <div class="content-area">
+        <div class="two-column tiled">
+            <div>
+                <h3>👨👩 大人組：WOWPASS</h3>
+                <p>機場/弘大機台辦理。匯率優，可刷卡消費。</p>
+                <p style="color:#db2777; font-weight:800;">⚠️ 注意：WOWPASS 內的 T-Money 交通錢包預設是空的！必須拿現金去超商儲值才能搭車。</p>
+            </div>
+            <div>
+                <h3>👧👦 孩童組(含14歲)：實體 T-Money</h3>
+                <p>去超商買可愛實體卡。出示護照請店員設定為「青少年/兒童卡」即享半價搭車！</p>
+                <p style="color:#059669; font-weight:800;">💡 14 歲孩子強烈建議買實體卡設定，比用 WOWPASS 改屬性更穩定、更省錢。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 6: Delivery & Restaurant Hack -->
+<div class="slide-container">
+    <h2 class="slide-title">🍗 宵夜外送與餐廳生存守則</h2>
+    <div class="content-area">
+        <div class="bullet-list" style="border-color: #fbcfe8;">
+            <ul>
+                <li><i class="fa-solid fa-motorcycle"></i> <strong>Creatrip 叫橋村炸雞 (Day 1 必備)：</strong><br>
+                    備註欄必填大門密碼：<span style="background: #fdf2f8; padding: 5px; font-family: monospace;">공동현관 비밀번호: [這裡填寫大門密碼] , 도착하면 전화주세요 (到了請打電話)</span><br>派 2 位大人提早下樓到一樓大門口取餐。
+                </li>
+                <li><i class="fa-solid fa-utensils"></i> <strong>12 人大團體餐廳分桌準備：</strong><br>韓國餐廳空間小，請先有心理準備進去會被拆成 3 桌 (4人一桌)。</li>
+                <li><i class="fa-solid fa-glass-water"></i> <strong>冰水文化與保溫瓶：</strong><br>韓國餐廳只供冰水。長輩小孩要喝溫水或吃藥，請自備輕量保溫瓶在 Airbnb 裝好出門。</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 7: Hidden Details (Shoes & Map) -->
+<div class="slide-container">
+    <h2 class="slide-title">🛡️ 達人級隱藏細節 (不可遺漏)</h2>
+    <div class="content-area">
+        <div class="tiled-content">
+            <div class="tile">
+                <div class="icon"><i class="fa-solid fa-socks"></i></div>
+                <h3>備用鞋襪與防磨貼</h3>
+                <p>7月梅雨季濕度高。隨身幫小孩多帶一雙乾襪子與 OK 繃，防止腳濕摩擦起水泡。</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fa-solid fa-wifi"></i></div>
+                <h3>網路分流計畫</h3>
+                <p>白天分兩隊走，兩邊帶隊大人都要有獨立網卡 (eSIM/網卡)，不要只靠一台分享器。</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fa-solid fa-map"></i></div>
+                <h3>導航與叫車</h3>
+                <p>步行導航用 Naver Map。12 人移動可開 Uber App 叫 3 台計程車，同步抵達！</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 8: Day 1 Arrival -->
+<div class="slide-container">
+    <h2 class="slide-title">📅 Day 1：抵達首爾與炸雞派對</h2>
+    <div class="content-area">
+        <div class="tiled-content">
+            <div class="tile">
+                <h3>19:45 抵達金浦</h3>
+                <p>出關後全家直奔超商，買好 6 個小孩的半價 T-Money 卡並儲值。</p>
+            </div>
+            <div class="tile">
+                <h3>20:30 AREX 往弘大</h3>
+                <p>搭乘機場快線只需 2 站 (14分)。找電梯出站前往 Airbnb。</p>
+            </div>
+            <div class="tile">
+                <h3>21:30 炸雞開派對</h3>
+                <p>安頓好後用 Creatrip 叫橋村炸雞。12人建議點 3-4 份「半半無骨炸雞」。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 9: Day 2 Itinerary -->
+<div class="slide-container">
+    <h2 class="slide-title">📅 Day 2：江南潮流與追星初體驗</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div>
+                <ul>
+                    <li><strong>🍳 晨間補給：弘大 Egg Drop</strong><br>出發前，全家先品嚐韓國超人氣的爆漿雞蛋吐司，美味又好拍！</li>
+                    <li><strong>🌟 追星小隊 (JYP & 巨型螢幕)</strong><br>朝聖 JYP 娛樂 ➔ K-Pop Square 三成站 3D 螢幕 ➔ 弘大 AK Plaza 買專輯。<br><span style="color:#059669;">🚇 弘大搭 2號線 ➔ 直達「三成站」。</span></li>
+                    <li><strong>☕ 觀光小隊 (樂天塔 & 圖書館)</strong><br>樂天世界塔 (Seoul Sky) ➔ COEX 星空圖書館拍美照。<br><span style="color:#059669;">🚇 弘大搭 2號線 ➔ 直達「蠶室站」。</span></li>
+                    <li><strong>🤝 晚上會合：弘大烤肉 (2大名店推薦)</strong><br>
+                        🍖 <strong>給豚的男人：</strong>必吃濟州厚切黑豬肉，店員全程代烤超輕鬆！<br>
+                        🍖 <strong>朝鮮火爐烤肉：</strong>空間較寬敞，招牌「水梨醃排骨」甜甜的小孩最愛！<br>
+                        (吃飽後沿著弘大主街散步，欣賞街頭 Busking 舞蹈表演)
+                    </li>
+                </ul>
+            </div>
+            <div class="image-wrapper" style="display: flex; align-items: center; justify-content: center; background: #fdf2f8; color: #db2777; font-size: 24px; font-weight: bold;"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 10: Day 3 Itinerary -->
+<div class="slide-container">
+    <h2 class="slide-title">📅 Day 3：聖水洞潮流與漢江</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div>
+                <ul>
+                    <li><strong>🌟 追星小隊 (Cube & 快閃店)</strong><br>朝聖 Cube 娛樂找 (G)I-DLE ➔ 聖水洞偶像快閃店 Pop-up。<br><span style="color:#059669;">🚇 弘大搭 2號線 ➔ 直達「聖水站」。</span></li>
+                    <li><strong>☕ 觀光小隊 (首爾林 & Dior)</strong><br>首爾林散步餵鹿 ➔ 絕美 Dior 聖水概念店拍家族大片。<br><span style="color:#059669;">🚇 弘大搭 2號線 ➔ 直達「纛島站」。</span></li>
+                    <li><strong>🤝 晚上會合：漢江公園野餐</strong><br>全員前往「纛島漢江公園」，江邊吃炸醬麵配美景！<br><span style="color:#059669; font-weight:800; font-size:16px;">🚇 交通：2號線至「建大入口站」換 7號線 ➔「紫陽站 (原纛島遊園地)」。</span></li>
+                </ul>
+            </div>
+            <div class="image-wrapper" style="display: flex; align-items: center; justify-content: center; background: #fdf2f8; color: #db2777; font-size: 24px; font-weight: bold;"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 11: Day 4 Itinerary -->
+<div class="slide-container">
+    <h2 class="slide-title">📅 Day 4：傳統韓服與最後血拼</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div>
+                <ul>
+                    <li><strong>🌟 追星小隊 (明洞尋寶)</strong><br>明洞 Music Korea 尋找絕版專輯 ➔ 弘大 Soundwave 補齊周邊。<br><span style="color:#059669; font-weight:800; font-size:16px;">🚇 交通：弘大 2號線 ➔ 直達「乙支路入口站」步行至明洞。</span></li>
+                    <li><strong>☕ 觀光小隊 (韓服與韓屋)</strong><br>景福宮穿韓服拍 12 人家族照 (免門票) ➔ 益善洞韓屋文創小店。<br><span style="color:#059669; font-weight:800; font-size:16px;">🚇 交通：弘大 2號線 ➔ 乙支路三街站換 3號線 ➔「景福宮站」或「鐘路三街站」。</span></li>
+                    <li><strong>🤝 晚上會合：廣藏市場</strong><br>名店推薦：<span style="color:#db2777; font-weight:800;">順熙家綠豆煎餅、富村生拌牛肉(米其林)。</span><br><span style="color:#db2777;">🛍️ 隱藏任務：買韓國冬被。</span><br><span style="color:#059669; font-weight:800; font-size:16px;">🚇 交通：地鐵 1號線 ➔「鐘路五街站」8號出口。</span></li>
+                </ul>
+            </div>
+            <div class="image-wrapper" style="display: flex; align-items: center; justify-content: center; background: #fdf2f8; color: #db2777; font-size: 24px; font-weight: bold;"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 12: Souvenir Matrix with AI -->
+<div class="slide-container">
+    <h2 class="slide-title">🛍️ 必買伴手禮多元指南 (不佔重量好選擇！)</h2>
+    <div class="content-area">
+        <div class="souvenir-grid" style="margin-bottom: 20px;">
+            <div style="grid-column: span 3; border: 3px solid #f472b6; background-color: #fdf2f8;">
+                <h3 style="color: #be185d;">🛌 韓國冬被 (廣藏市場)</h3>
+                <p><strong>隱藏版王者伴手禮！</strong>親膚防塵蟎、可機洗。記得請老闆用真空機「壓縮成薄磚塊」，放進托運行李帶回台灣！</p>
+            </div>
+            <div style="grid-column: span 3;">
+                <h3>💄 美妝神區 (Olive Young)</h3>
+                <p>Torriden 保濕面膜、VT微針精華、CarePlus 隱形痘痘貼、Romand 唇釉。<strong>結帳出示護照當場退稅。</strong></p>
+            </div>
+            <div style="grid-column: span 2;">
+                <h3>🍪 超市零食掃貨</h3>
+                <p>HBAF 杏仁果、大蒜貝果餅乾、Zero 零糖軟糖、Kanu 咖啡。</p>
+            </div>
+            <div style="grid-column: span 2;">
+                <h3>🧸 文創 & 追星周邊</h3>
+                <p>官方小卡(WithMuu)、大創Daiso(姓名貼機)、Object 文青貼紙。</p>
+            </div>
+            <div style="grid-column: span 2;">
+                <h3>🧦 穿搭與服飾小物</h3>
+                <p>弘大必買「造型短襪」(便宜不佔重量)、潮牌老帽、Carlyn 雲朵包。</p>
+            </div>
+        </div>
+        <!-- Gemini AI Button Integration -->
+        <button class="ai-btn" onclick="openAIModal('souvenir')"><i class="fa-solid fa-gift"></i> ✨ 送禮沒靈感？呼叫 AI 專屬伴手禮顧問</button>
+    </div>
+</div>
+
+<!-- Slide 13: Day 5 Departure -->
+<div class="slide-container">
+    <h2 class="slide-title">✈️ Day 5：滿載而歸</h2>
+    <div class="content-area">
+        <div class="timeline-layout">
+            <div class="timeline-item">
+                <h3>08:30 終極秤重</h3>
+                <p>最後確認重量！<br><span style="color:#ef4444; font-weight: 800;">檢查行動電源標示<br>放隨身包！</span></p>
+            </div>
+            <div class="timeline-item">
+                <h3>09:30 去機場</h3>
+                <p>搭乘 AREX 快線<br>前往仁川 T1。</p>
+            </div>
+            <div class="timeline-item">
+                <h3>10:30 機場報到</h3>
+                <p>辦理行李託運、退稅、<br>領取免稅品。</p>
+            </div>
+            <div class="timeline-item">
+                <h3>13:05 班機起飛</h3>
+                <p>搭乘德威 TW671<br>帶著滿滿回憶回高雄！</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 14: Rainy Day Plans -->
+<div class="slide-container">
+    <h2 class="slide-title">☔ 遇水則發！最強室內雨天備案</h2>
+    <div class="content-area">
+        <div class="bullet-list">
+            <ul>
+                <li><i class="fa-solid fa-umbrella"></i> <strong>The Hyundai Seoul (汝矣島現代百貨)：</strong> 韓國最大最美百貨，地下直通地鐵一滴雨都淋不到。</li>
+                <li><i class="fa-solid fa-ferris-wheel"></i> <strong>樂天世界 (室內探險世界)：</strong> 巨大的室內遊樂園，小孩放電首選。</li>
+                <li><i class="fa-solid fa-video"></i> <strong>HiKR Ground (好客空間)：</strong> 免費 XR K-Pop 舞台體驗，孩子可錄製專屬 MV。</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 15: Q&A -->
+<div class="slide-container">
+    <div class="qa-layout">
+        <h2>一切準備就緒！</h2>
+        <p>12 位家人，首爾雙軌追星之旅順利圓滿 🌸</p>
+        <p style="font-size: 20px; color: #4b5563; margin-top: 20px;">Travel Master 祝您玩得開心！</p>
+    </div>
+</div>
+
+<!-- AI Modal UI -->
+<div class="ai-modal-overlay" id="ai-modal-overlay">
+    <div class="ai-modal" id="ai-modal">
+        <button class="ai-close" onclick="closeAIModal()"><i class="fa-solid fa-xmark"></i></button>
+        <h3 id="ai-modal-title">✨ AI 小幫手</h3>
+        <p style="color: #4b5563; font-size: 16px; margin-bottom: 5px;" id="ai-modal-desc">請輸入問題</p>
+        <div class="ai-input-area">
+            <input type="text" id="ai-input" class="ai-input" placeholder="..." onkeydown="if(event.key === 'Enter'){submitAIQuery()}">
+            <button class="ai-submit" onclick="submitAIQuery()"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+        <div class="ai-loading" id="ai-loading"><i class="fa-solid fa-spinner"></i> ✨ AI 思考中...</div>
+        <div class="ai-result" id="ai-result"></div>
+    </div>
+</div>
+
+<!-- Gemini AI API Logic -->
+<script>
+    const apiKey = ""; // API Key 於執行環境自動注入
+    let currentAIType = '';
+
+    function openAIModal(type) {
+        currentAIType = type;
+        const inputStr = document.getElementById('ai-input');
+        const title = document.getElementById('ai-modal-title');
+        const desc = document.getElementById('ai-modal-desc');
+        const resultDiv = document.getElementById('ai-result');
+
+        resultDiv.style.display = 'none';
+        resultDiv.innerHTML = '';
+        inputStr.value = '';
+
+        if (type === 'luggage') {
+            title.innerHTML = '✨ AI 行李安檢員';
+            desc.innerHTML = '想帶什麼去韓國？我幫你檢查能不能帶、放哪裡！';
+            inputStr.placeholder = '例：150ml 防曬乳、刮鬍刀、雨傘...';
+        } else if (type === 'souvenir') {
+            title.innerHTML = '✨ AI 專屬伴手禮顧問';
+            desc.innerHTML = '告訴我收禮人的特徵，我推薦最適合的首爾好物！';
+            inputStr.placeholder = '例：愛漂亮的女大學生、愛喝茶的阿嬤...';
+        }
+
+        document.getElementById('ai-modal-overlay').style.display = 'flex';
+        setTimeout(() => inputStr.focus(), 100);
+    }
+
+    function closeAIModal() {
+        document.getElementById('ai-modal-overlay').style.display = 'none';
+    }
+
+    async function callGeminiAPI(prompt, systemInstruction) {
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+        const payload = {
+            contents: [{ parts: [{ text: prompt }] }],
+            systemInstruction: { parts: [{ text: systemInstruction }] }
+        };
+
+        const delays = [1000, 2000, 4000, 8000, 16000];
+        let lastError = null;
+
+        // Implement exponential backoff for API calls
+        for (let i = 0; i <= delays.length; i++) {
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP 錯誤: ${response.status}`);
+                }
+
+                const result = await response.json();
+                return result.candidates[0].content.parts[0].text;
+            } catch (error) {
+                lastError = error;
+                if (i < delays.length) {
+                    await new Promise(resolve => setTimeout(resolve, delays[i]));
+                }
+            }
+        }
+        return `哎呀！AI 導遊暫時去吃炸雞了，請稍後再試！(${lastError.message})`;
+    }
+
+    async function submitAIQuery() {
+        const inputElement = document.getElementById('ai-input');
+        const inputStr = inputElement.value.trim();
+        if (!inputStr) return;
+
+        const resultDiv = document.getElementById('ai-result');
+        const loadingDiv = document.getElementById('ai-loading');
+
+        resultDiv.style.display = 'none';
+        loadingDiv.style.display = 'block';
+        inputElement.disabled = true;
+
+        let prompt = "";
+        let sysInstr = "";
+
+        if (currentAIType === 'luggage') {
+            sysInstr = "你是一個韓國旅遊行李檢查專家。使用者會輸入物品名稱，請簡短明確回答該物品針對一般飛航規定應該放在「手提登機」、「託運行李」或是「禁止攜帶」，並用繁體中文給出一句幽默或實用的原因。可使用粗體標記重點。";
+            prompt = `請問搭飛機去韓國，這個物品該怎麼帶：${inputStr}`;
+        } else if (currentAIType === 'souvenir') {
+            sysInstr = "你是一個精通韓國首爾旅遊的達人。使用者會描述送禮對象，請在首爾常見的商品（如美妝、零食、文創、衣物）中，推薦 2 個具體的伴手禮選項，並附上繁體中文的簡短理由。態度熱情可愛，請使用 Markdown 粗體強調物品名稱。";
+            prompt = `我想在首爾買禮物，對象是：${inputStr}`;
+        }
+
+        const reply = await callGeminiAPI(prompt, sysInstr);
+
+        loadingDiv.style.display = 'none';
+        // Convert some basic Markdown bold to HTML for display
+        const htmlReply = reply.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        resultDiv.innerHTML = htmlReply;
+        resultDiv.style.display = 'block';
+        inputElement.disabled = false;
+        inputElement.value = '';
+    }
+</script>
+
+</body>
 </html>
